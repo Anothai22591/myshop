@@ -1,0 +1,114 @@
+body {
+    background: url("images/5.jpg")  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button-1 {background-color: #AED6F1  ; 
+          color: black; 
+          border-radius: 8px;
+          width: 100%;
+          border: 2px solid #3498DB;
+         }
+.button-1:hover {
+    background-color: #2E86C1  ;
+    color: white;
+}
+.button0 {background-color: #C39BD3; 
+          color: black; 
+          border-radius: 8px;
+          width: 100%;
+          border: 2px solid #884EA0;
+         }
+.button0:hover {
+    background-color: #8E44AD;
+    color: white;
+}
+.button1 {background-color: #C39BD3; 
+          color: black; 
+          border-radius: 8px;
+          width: 150px;
+          border: 2px solid #884EA0;
+         }
+.button1:hover {
+    background-color: #8E44AD;
+    color: white;
+}
+.button2 {background-color: #C39BD3; 
+          color: black; 
+          border-radius: 4px;
+          width: 100px;
+          border: 2px solid #884EA0;
+         }
+.button2:hover {
+    background-color: #8E44AD;
+    color: white;
+}
+.button3 {background-color: #C39BD3; 
+          color: black; 
+          border-radius: 8px;
+          width: 100%;
+          border: 2px solid #884EA0;
+         }
+.button3:hover {
+    background-color: #8E44AD;
+    color: black;
+}
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #884EA0;
+    padding: 10px;
+    background-color: #F4ECF7;
+}
+.center1 {
+    margin: auto;
+    width: 35%;
+    border: 3px solid #884EA0;
+    padding: 10px;
+    background-color: #F4ECF7;
+}
+.center2 {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #884EA0;
+    padding: 10px;
+    background-color: #F4ECF7;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=text]:focus {
+    border: 2px solid #BB8FCE  ;
+    background-color: #E8DAEF;
+}
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=password]:focus {
+    background-color: #E8DAEF;
+    border: 2px solid #BB8FCE  ;
+}
+
+
+
+

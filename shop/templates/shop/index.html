@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+<html>
+    <head>
+        <title>Snack & Drink Delivery</title>
+    </head>
+    <body>
+        <center><h1>Snack & Drink Delivery</h1></center>
+        <form action="{% url 'shop:login' %}" method="post">
+            {% csrf_token %}
+            <br><br><br><center><button type="submit"class ="button button1">Login</button></center>
+        </form>
+        <form action="{% url 'shop:about' %}" method="post">
+            {% csrf_token %}
+            <center><button type="submit" class ="button button1">About us</button></center>
+        </form>
+    </body>
+</html>
+
+

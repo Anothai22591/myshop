@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+<html>
+    <head>
+        <title>register</title>
+    </head>
+    <body>
+        <center><h1>register</h1></center>
+        <br><br>
+        <div class="center1">
+        <br><br>
+        <form action="{% url 'shop:save_user' %}" method="post">
+        {% csrf_token %}
+        <b>Name :</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=text name=name placeholder="Ex anothai arunthong."></br> 
+        <br><b>Phone :</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=text name=phone placeholder="Ex 09097827xx."></br> 
+        <br><b>Username :</b> <input type=text name=username placeholder="Ex anothai ."></br> 
+        <br><b>Password :</b> &nbsp;<input type=text name=password placeholder="Ex 123456."></br>
+        <br><input type="submit" class ="button button0" value="register" />
+        </form>
+        </div>
+    </body>
+</html>

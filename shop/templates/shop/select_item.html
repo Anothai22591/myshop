@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+<html>
+    <head>
+        <title>Order</title>
+    </head>
+    <body>
+        <right><p align="right">user : {{u_text}}</p></right>
+        <center><h1>Order Snack & Drink</h1></center>
+<div class="center2">
+<B>Delivery location  : &nbsp;</B> {{location}}&nbsp;&nbsp;<B>Time  : &nbsp;</B>{{time}}<br>
+<h3><br>Ordered item</br></h3>
+{% for i in item %}
+     {{ forloop.counter }}.
+     {{i}}<br>
+{% endfor %}
+
+<h2>Thank you</h2>
+<form action="{% url 'shop:index' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" class ="button button1" value="logout" />
+        </form>
+ 
+</div >

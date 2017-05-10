@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+<html>
+    <head>
+        <title>Admin</title>
+    </head>
+    <body>
+        
+        <center><h1>Admin page</h1></center>
+        <div class="center2">
+        <h2>Order list</h2>
+<br>
+        {% for i in order_list %}
+            <b>Username : </b>{{ i.Order_user_text }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Location :</b>{{ i.Delivery_location }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Time :</b>{{ i.time }} <br><br>
+            {% for o in i.order_set.all %}
+            <dd>{{ forloop.counter }}.{{ o.order_text }}.</dd>
+            {% endfor %}
+            <br><hr><br>
+        {% endfor %}
+        <form action="{% url 'shop:clear_order' %}" method="post">
+            {% csrf_token %}
+            <button type="submit"class ="button button1">clear list</button>
+        </form>
+        <a href="{% url 'shop:index' %}">back to home</a>
+        </>

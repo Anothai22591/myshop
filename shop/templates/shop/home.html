@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+<html>
+    <head>
+        <title>Snack & Drink Delivery</title>
+    </head>
+    <body>
+        <right><p align="right"><b>User :</b> {{u_text}}</p></right>
+        <center><h1>Snack & Drink Delivery</h1></center>
+<div class="center2">
+<form action="{% url 'shop:select_item' u_text %}" method="post">
+{% csrf_token %}
+        {% for t_menu in menu_list %}
+    <h3>{{ t_menu.type_text }}</h3>
+    
+    {% for menu in t_menu.menu_set.all %}
+ <input type="CHECKBOX" name="checks[]" value="{{menu.menu_text}}"/>
+        {{ menu.menu_text }} price {{ menu.price }} bath.<br>
+    {% endfor %}
+{% endfor %}
+
+<br>Delivery location : <input type="text" class ="button button3" name="location" />
+Time  : <input type="text" class ="button button3" name="time" />
+<br><input type="submit" class="button button1" value="submit" />
+</form>
+</div>

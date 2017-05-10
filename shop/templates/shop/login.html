@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}" />
+<html>
+    <head>
+        <title>login</title>
+    </head>
+    <body>
+        <center><h1>Account login</h1></center>
+        <br><br>
+        <div class="center1">
+        <br><br>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <form action="{% url 'shop:check_user_login' %}" method="post">
+        {% csrf_token %}
+        <b><label for="uname">Username : </label></b>
+        <input type=text id="uname" name=username ></br>
+        <b><label for="password">Password :&nbsp; </label></b>
+        <input type=password id="password" name=password ></br>
+        <br><input type="submit" class ="button button0" value="login" />
+        </form>
+        <form action="{% url 'shop:register' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" class ="button button-1" value="register" />
+        </form>
+        </div>
+        
+    </body>
+</html>
