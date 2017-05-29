@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from .models import User,Type_menu,Menu,Order_user,Order
 
 admin.site.register(User)

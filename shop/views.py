@@ -5,10 +5,13 @@ from .models import User,Type_menu,Menu,Order_user,Order
 
 def index(request):
     return render(request,'shop/index.html','')
+
 def login(request):
     return render(request,'shop/login.html','')
+
 def register(request):
     return render(request,'shop/register.html','')
+
 def about(request):
     return render(request,'shop/about.html','')
 
@@ -16,8 +19,7 @@ def save_user(request):
     name_text = request.POST['name']
     phone_text = request.POST['phone']
     username_text = request.POST['username']
-    password_text = request.POST['password']
-    
+    password_text = request.POST['password']   
     q=User(name=name_text,phone=phone_text,username=username_text,password=password_text)
     q.save()
     context = { 'name_text' : name_text,
@@ -47,9 +49,7 @@ def check_user_login(request):
     else:
         context ={'error_message': "username หรือ password ของคุณไม่ถูกต้อง."}
         return render(request,'shop/login.html',context)
-          
-
-
+      
 def select_item(request,u_text):
     location = request.POST['location']
     time = request.POST['time']
@@ -67,6 +67,3 @@ def clear_order(request):
     order_list =  Order_user.objects.all()
     context = { 'order_list' :order_list}
     return render(request,'shop/admin.html',context)
-    
-    
-
