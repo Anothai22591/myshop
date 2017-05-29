@@ -9,9 +9,9 @@ class User(models.Model):
         return self.username
 
 class Type_menu(models.Model):
-    type_text = models.CharField(max_length=100) 
+    types = models.CharField(max_length=100) 
     def __str__(self):
-        return self.type_text
+        return self.types
 
 class Menu(models.Model):
     type_text = models.ForeignKey(Type_menu)

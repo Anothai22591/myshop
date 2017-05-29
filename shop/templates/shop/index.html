@@ -4,11 +4,20 @@
     <head>
         <title>Snack & Drink Delivery</title>
     </head>
+    <style>
+    img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 200px;
+    }
+    </style>
     <body>
         <center><h1>Snack & Drink Delivery</h1></center>
         <form action="{% url 'shop:login' %}" method="post">
             {% csrf_token %}
-            <br><br><br><center><button type="submit"class ="button button1">Login</button></center>
+             <center><img src="{% static 'shop/4.jpg' %}"/><br></center>
+            <br><br><center><button type="submit"class ="button button1">Login</button></center>
         </form>
         <form action="{% url 'shop:about' %}" method="post">
             {% csrf_token %}

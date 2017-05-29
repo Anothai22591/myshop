@@ -11,7 +11,7 @@
 <form action="{% url 'shop:select_item' u_text %}" method="post">
 {% csrf_token %}
         {% for t_menu in menu_list %}
-    <h3>{{ t_menu.type_text }}</h3>
+    <h3>{{ t_menu.types }}</h3>
     
     {% for menu in t_menu.menu_set.all %}
  <input type="CHECKBOX" name="checks[]" value="{{menu.menu_text}}"/>
